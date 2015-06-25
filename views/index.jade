@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Survay Form
+    != renderStyles()
+  body
+    .container
+      .col-xs-6
+        form(action = '/', method = 'POST')
+          input#txtCustomerName(name = 'txtCustomerName')
+      .col-xs-6
+        span.glyphicon.glyphicon-heart
