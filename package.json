@@ -1,5 +1,5 @@
 {
-  "name": "tChat",
+  "name": "LiveChat by IOsonoTAN",
   "version": "0.0.1",
   "private": "true",
   "dependencies": {
@@ -10,7 +10,7 @@
     "express": "4.13.0",
     "jade": "*",
     "lodash": "^3.9.3",
-    "moment": "~2.1.0",
+    "moment": "^2.1.0",
     "nib": "^1.1.0",
     "node-dev": "~2.0.1",
     "request": "~2.16.6",

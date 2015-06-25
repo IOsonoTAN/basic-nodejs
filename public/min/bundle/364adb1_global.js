@@ -1,1 +1,0 @@
-(function(){$(function(){var a;return a=io(),$("form").submit(function(){return a.emit("chat message",$("#m").val()),$("#m").val("")}),a.on("chat message",function(a){return $("#messages").append($("<li>").text(a))})})}).call(this)

@@ -7,6 +7,10 @@ stylus = require('stylus')
 nib = require('nib')
 bundle_up = require('bundle-up3')
 assets = require('./assets')
+global.moment = require('moment')
+global._ = require('lodash')
+global.helper = require('./libs/helper')(app)
+global.config = require('./config')
 
 for file in fs.readdirSync './apps'
   continue if file.search(/\.bak|\.disabled|^\./) > -1
@@ -21,7 +25,7 @@ bundle_up app, assets,
   staticRoot: __dirname + '/public/'
   staticUrlRoot: '/'
   bundle: true
-  minifyCss: true
+  minifyCss: false
   minifyJs: true
   complete: console.log.bind(console, 'Bundle-up: static files are minified/ready')
 
@@ -29,6 +33,7 @@ app.set('env', process.env.NODE_ENV or 'development')
 app.set('port', process.env.PORT or 3000)
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
+app.set('site_name', config.site_name)
 app.use(stylus.middleware({ src: "#{__dirname}/public/css", compile: compile }))
 app.use(express.static(__dirname + '/public/'))
 
