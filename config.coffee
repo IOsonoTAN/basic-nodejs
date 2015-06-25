@@ -4,7 +4,7 @@ process.env.NODE_ENV = env
 
 config = 
   default: 
-    site_name: 'LiveChat by IOsonoTAN'
+    site_name: 'LiveChat'
 
   production:
     session_secret: 'app-on-production'
