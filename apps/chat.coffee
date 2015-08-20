@@ -1,4 +1,11 @@
 module.exports = (app) ->
+
+  # Pass variables to jade
+  app.use (req, res, next) ->
+    res.locals.current_url = req.originalUrl
+    res.locals.site_name = config.site_name
+    next()
+  
   app.get '/chat', (req, res) ->
     res.render 'chat', app: 'application'
 
