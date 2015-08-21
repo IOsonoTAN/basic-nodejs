@@ -1,15 +1,7 @@
 module.exports = (app) ->
-  init: (req, res, next) ->
-    res.locals.currentUrl = req.originalUrl
-    res.locals.site_name = config.site_name
-    next()
 
-  # checklogin: (req, res, next) ->
-  #   if !req.session.auth
-  #     req.session.originalUrl = req.originalUrl
-  #     res.redirect '/auth/google'
-  #   else
-  #     next()
+  init: (req, res, next) ->
+    next()
 
   rand: ($range) ->
     text = ''

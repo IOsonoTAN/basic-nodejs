@@ -4,7 +4,7 @@ process.env.NODE_ENV = env
 
 config = 
   default: 
-    site_name: 'LiveChat'
+    site_name: 'Basic NodeJS'
 
   production:
     session_secret: 'app-on-production'
